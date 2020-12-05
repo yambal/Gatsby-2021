@@ -3,7 +3,7 @@ import styled from '@xstyled/styled-components'
 import { Box } from '@xstyled/styled-components'
 import { Link, graphql } from "gatsby"
 import { IndexHogeQuery } from "../../types/graphql-types"
-import { Sample } from '../components/Sample'
+import { Sample } from '../components/sample/Sample'
 
 const Wrapper = styled(Box)``
 
