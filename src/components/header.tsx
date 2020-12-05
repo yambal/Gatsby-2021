@@ -1,9 +1,14 @@
 import * as React from "react"
+import styled from '@xstyled/styled-components'
+import { Box } from '@xstyled/styled-components'
 import { Link } from "gatsby"
+
+
+const Wrapper = styled(Box)``
 // ______________________________________________________
 //
 const Component: React.FC = () => (
-  <div
+  <Wrapper
     style={{
       background: "rebeccapurple",
       marginBottom: "1.45rem"
@@ -28,7 +33,7 @@ const Component: React.FC = () => (
         </Link>
       </h1>
     </div>
-  </div>
+  </Wrapper>
 )
 // ______________________________________________________
 //
