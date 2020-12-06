@@ -2366,4 +2366,4 @@ export type HomeTemplateQueryVariables = Exact<{
 }>;
 
 
-export type HomeTemplateQuery = { mdData?: Maybe<Pick<MarkdownRemark, 'html'>> };
+export type HomeTemplateQuery = { pageQueryData?: Maybe<Pick<MarkdownRemark, 'html'>> };

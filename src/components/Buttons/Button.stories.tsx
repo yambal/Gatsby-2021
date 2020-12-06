@@ -11,7 +11,7 @@ export default {
 export const button: Story<ButtonProps> = (args) => (
   <div>
     <Button {...args} purpose="primary">child</Button>
-    <Button {...args} purpose="primary" size="lg">child</Button>
-    <Button {...args} purpose="primary" size="sm">child</Button>
+    <Button {...args} purpose="primary" buttonSize="lg">child</Button>
+    <Button {...args} purpose="primary" buttonSize="sm">child</Button>
   </div>
 )

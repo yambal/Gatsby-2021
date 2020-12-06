@@ -7,7 +7,7 @@ import { variant } from '@xstyled/system'
  */
 export type ButtonProps = ComponentProps<typeof Box> & {
   purpose?: '' | 'normal' | 'alert' | 'primary'
-  size?: '' | 'lg' | 'sm'
+  buttonSize?: '' | 'lg' | 'sm'
 }
 
 const colorVariants = variant({
@@ -37,7 +37,7 @@ const colorVariants = variant({
 
 const sizeVariants = variant({
   default: 'normal',
-  prop: 'size',
+  prop: 'buttonSize',
   variants: {
     normal: css`
       padding: .375rem .75rem;
