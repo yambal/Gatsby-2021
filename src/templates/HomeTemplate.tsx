@@ -36,15 +36,14 @@ const HomeTemplate: React.FC<HomeTemplateProps> = props => {
   )
 
 }
-// ______________________________________________________
-//
+
+/**
+ * Node の id を受け取り、詳細データをリクエストする
+ */
 export const pageQuery = graphql`
   query HomeTemplate($id: String) {
     mdData: markdownRemark(id: {eq: $id}) {
       html
-      frontmatter {
-        template
-      }
     }
   }
 `
