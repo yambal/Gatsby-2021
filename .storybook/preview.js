@@ -1,7 +1,7 @@
 
 import React from "react"
 import { ThemeProvider, ColorModeProvider } from '@xstyled/styled-components'
-import { theme } from '../src/components/Buttons/themes'
+import { theme } from '../src/themes/themes'
 import { useColorMode } from '@xstyled/styled-components'
 
 export const parameters = {

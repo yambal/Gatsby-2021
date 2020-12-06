@@ -1,6 +1,6 @@
 import React from "react"
 import { ThemeProvider, ColorModeProvider } from '@xstyled/styled-components'
-import { theme } from './src/themes/theme'
+import { theme } from './src/themes/themes'
 
 /**
  * Gatsby は Context-Provider をここ（gatsby-browser.js）に書く
