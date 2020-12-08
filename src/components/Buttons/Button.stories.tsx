@@ -8,10 +8,16 @@ export default {
   component: Button
 } as Meta;
 
-export const button: Story<ButtonProps> = (args) => (
+export const bootstrap_button: Story<ButtonProps> = (args) => (
   <div>
-    <Button {...args} purpose="primary">child</Button>
-    <Button {...args} purpose="primary" buttonSize="lg">child</Button>
-    <Button {...args} purpose="primary" buttonSize="sm">child</Button>
+    <Button {...args} purpose="primary">Primary</Button>&nbsp;
+    <Button {...args} purpose="secondary">Secondary</Button>&nbsp;
+    <Button {...args} purpose="success">Success</Button>&nbsp;
+    <Button {...args} purpose="danger">Danger</Button>&nbsp;
+    <Button {...args} purpose="warning">Warning</Button>&nbsp;
+    <Button {...args} purpose="info">Info</Button>&nbsp;
+    <Button {...args} purpose="light">Light</Button>&nbsp;
+    <Button {...args} purpose="dark">Dark</Button>&nbsp;
+    <Button {...args} purpose="link">Link</Button>&nbsp;
   </div>
 )
