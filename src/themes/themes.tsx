@@ -1,8 +1,12 @@
 import { colors } from './colors'
+import { fonts } from './fonts'
 import { darken, transparentize } from 'polished'
 
 export const theme = {
   colors: {
+    baseBg: colors.bootstrap.white,
+    baseText: colors.bootstrap.body,
+
     primary: colors.bootstrap.primary,
     secondary: colors.bootstrap.secondary,
     success: colors.bootstrap.success,
@@ -144,6 +148,16 @@ export const theme = {
     lightFocus: `0 0 0 0.2rem ${transparentize(0.5, darken(0.1, colors.bootstrap.light))}`,
     darkFocus: `0 0 0 0.2rem ${transparentize(0.75, colors.bootstrap.dark)}`,
     linkFocus: `0 0 0 0.2rem ${transparentize(0.75, colors.bootstrap.primary)}`
+  },
+
+  fonts: {
+    bootstrap: fonts.bootstrap,
+    base: fonts.bootstrap,
+    mode: {
+      bootstrap: {
+        base: fonts.bootstrap
+      }
+    }
   }
 }
 
