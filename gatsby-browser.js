@@ -1,4 +1,5 @@
 import React from "react"
+import { SiteMetadataProvider } from './src/provider/SiteMetadataProvider'
 import { ThemeProvider, ColorModeProvider } from '@xstyled/styled-components'
 import { theme } from './src/themes/themes'
 import { GlobalStyle } from './src/themes/GlobalStyle'
@@ -14,7 +15,9 @@ export const wrapRootElement = ({ element }) => (
   <ThemeProvider theme={theme}>
     <ColorModeProvider>
       <GlobalStyle font="bootstrap"/>
-      {element}
+      <SiteMetadataProvider>
+        {element}
+      </SiteMetadataProvider>
     </ColorModeProvider>
   </ThemeProvider>
 )
