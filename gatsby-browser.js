@@ -1,4 +1,5 @@
 import React from "react"
+import { SiteMetadataProvider } from './src/provider/SiteMetadataProvider'
 import { ThemeProvider, ColorModeProvider } from '@xstyled/styled-components'
 import { theme } from './src/themes/themes'
 
@@ -9,7 +10,9 @@ import { theme } from './src/themes/themes'
 export const wrapRootElement = ({ element }) => (
   <ThemeProvider theme={theme}>
     <ColorModeProvider>
-      {element}
+      <SiteMetadataProvider>
+        {element}
+      </SiteMetadataProvider>
     </ColorModeProvider>
   </ThemeProvider>
 )

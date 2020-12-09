@@ -8,6 +8,7 @@ import { default as Layout } from '../layouts/index'
 import { Button } from '../components/Buttons/Button'
 import { useColorMode } from '@xstyled/styled-components'
 import { GatsbyProps } from '../../types/GatsbyTypes'
+import { useSiteMetadata } from '../provider/SiteMetadataProvider'
 
 
 /**
@@ -40,7 +41,7 @@ const HomeTemplateWrapper = styled(Box)`
   /**
    * ThemeProvider を使用していれば
    * このような theme を利用した指定ができる（theme は gatsby-browser.js で注入している）
-   * color: ${props => props.theme.colors.text};
+   * color: ${props => props.theme.colors.black50};
    **/
   /**
    * xstyled のコンポーネントを継承しているので、下記のような表現もできる
@@ -67,6 +68,8 @@ function HomeTemplate(props: HomeTemplateProps){
    * gatsby-browser.js で注入している
    */
   const [colorMode, setColorMode] = useColorMode()
+
+  const site  = useSiteMetadata()
   
   return (
     <HomeTemplateWrapper {...WrapperProps}>
@@ -82,6 +85,8 @@ function HomeTemplate(props: HomeTemplateProps){
       <pre>{JSON.stringify(data.pageQueryData?.html, null, 2)}</pre>
       WrapperProps
       <pre>{JSON.stringify(WrapperProps, null, 2)}</pre>
+      SiteMetadata
+      <pre>{JSON.stringify(site, null, 2)}</pre>
     </HomeTemplateWrapper>
   )
 

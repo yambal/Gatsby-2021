@@ -2361,6 +2361,11 @@ export type AuthorsQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type AuthorsQuery = { site?: Maybe<{ siteMetadata?: Maybe<{ authors?: Maybe<Array<Maybe<Pick<SiteSiteMetadataAuthors, 'name' | 'slug'>>>> }> }> };
 
+export type SiteMetadataProviderQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type SiteMetadataProviderQuery = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
+
 export type HomeTemplateQueryVariables = Exact<{
   id?: Maybe<Scalars['String']>;
 }>;
