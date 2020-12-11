@@ -9,6 +9,7 @@ import { Button } from '../components/Buttons/Button'
 import { useColorMode } from '@xstyled/styled-components'
 import { GatsbyProps } from '../../types/GatsbyTypes'
 import { useSiteMetadata } from '../provider/SiteMetadataProvider'
+import { CounterContainer } from '../redux/features/counter/CounterContainer'
 
 
 /**
@@ -69,10 +70,11 @@ function HomeTemplate(props: HomeTemplateProps){
    */
   const [colorMode, setColorMode] = useColorMode()
 
-  const site  = useSiteMetadata()
+  const site = useSiteMetadata()
   
   return (
     <HomeTemplateWrapper {...WrapperProps}>
+      <Box as="h1" color="primary">{site?.title}</Box>
       <Button
         m="1rem"
         buttonSize="sm"
@@ -85,8 +87,7 @@ function HomeTemplate(props: HomeTemplateProps){
       <pre>{JSON.stringify(data.pageQueryData?.html, null, 2)}</pre>
       WrapperProps
       <pre>{JSON.stringify(WrapperProps, null, 2)}</pre>
-      SiteMetadata
-      <pre>{JSON.stringify(site, null, 2)}</pre>
+      <CounterContainer />
     </HomeTemplateWrapper>
   )
 
@@ -95,6 +96,8 @@ function HomeTemplate(props: HomeTemplateProps){
 /**
  * Node の id を受け取り、詳細データをリクエストする
  * $id は createPage(gatsby-node.js) で挿入された context である
+ * 
+ * 本当は useStaticQuery で組んだ方がスマートだろうけど、変数が使えない
  */
 export const pageQuery = graphql`
   query HomeTemplate($id: String) {
