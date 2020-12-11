@@ -216,6 +216,10 @@ export const Button = (styled(Box).attrs({as: 'button'}) as typeof styled.button
   border: 1px solid transparent;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 
+  outline-color: initial;
+  outline-style: initial;
+  outline-width: 0px;
+
   &:not(:disabled) {
     cursor: pointer;
   }
