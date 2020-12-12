@@ -4,7 +4,7 @@
  * https://redux-toolkit.js.org/
  */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { RootState } from '../../store'
+import { RootState } from '../../app/store'
 
 export type CounterState = {
   count: number

@@ -2356,11 +2356,6 @@ export type StringQueryOperatorInput = {
   glob?: Maybe<Scalars['String']>;
 };
 
-export type AuthorsQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type AuthorsQuery = { site?: Maybe<{ siteMetadata?: Maybe<{ authors?: Maybe<Array<Maybe<Pick<SiteSiteMetadataAuthors, 'name' | 'slug'>>>> }> }> };
-
 export type SiteMetadataProviderQueryVariables = Exact<{ [key: string]: never; }>;
 
 

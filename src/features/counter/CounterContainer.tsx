@@ -1,11 +1,11 @@
 import React, { useCallback } from 'react'
 import { useSelector } from 'react-redux'
-import { useAppDispatch } from '../../store'
+import { useAppDispatch } from '../../app/store'
 import { counterSlice } from './counterSlice'
 import {
   counSelector
 } from './counterSlice'
-import { Counter } from '../../../components/organisms/Counter'
+import { Counter } from '../../components/organisms/Counter'
 
 /**
  * Redux サンプル Counter の コンテナールコンポーネント

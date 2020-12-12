@@ -5,11 +5,11 @@ import { Link, graphql } from "gatsby"
 import { HomeTemplateQuery } from "../../types/graphql-types"
 import { Sample } from '../components/sample/Sample'
 import { default as Layout } from '../layouts/index'
-import { Button } from '../components/Buttons/Button'
+import { Button } from '../components/atoms/Buttons/Button'
 import { useColorMode } from '@xstyled/styled-components'
 import { GatsbyProps } from '../../types/GatsbyTypes'
 import { useSiteMetadata } from '../provider/SiteMetadataProvider'
-import { CounterContainer } from '../redux/features/counter/CounterContainer'
+import { CounterContainer } from '../features/counter/CounterContainer'
 
 
 /**

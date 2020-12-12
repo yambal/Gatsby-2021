@@ -1,6 +1,6 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import { useDispatch } from 'react-redux'
-import { counterSlice } from './features/counter/counterSlice'
+import { counterSlice } from '../features/counter/counterSlice'
 
 export const rootReducer = combineReducers({
   [counterSlice.name]: counterSlice.reducer,

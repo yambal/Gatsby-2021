@@ -8,11 +8,8 @@ require('ts-node').register({
     target: 'esnext',
   },
 })
-/*
-exports.createPages = require('./gatsby-node/index').createPages
-*/
 
-exports.createPages = ({ actions, graphql }) => {
+exports.createPages = async function ({ actions, graphql }) {
   console.log('--- createPages ---')
   const { createPage } = actions
 
@@ -21,7 +18,7 @@ exports.createPages = ({ actions, graphql }) => {
    * edges.node.fields.slug は onCreateNode で付加したもの
    * edges.node.frontmatter.template は、そのMDをどのテンプレートで描画するかを指定するものとして、MDで指定されている事を期待している
    */
-  return graphql(`
+  await graphql(`
     {
       allMarkdownRemark(limit: 1000) {
         edges {
@@ -69,12 +66,11 @@ exports.createPages = ({ actions, graphql }) => {
  */
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
-  // fmImagesToRelative(node) // convert image paths for gatsby images
-
   /**
    * Markdown の Node の場合、graphQL のレスポンスにフィールドを追加する
    * createFilePath は、MDファイルのファイル情報（Dir, Name）によってパスを生成する
    */
+  
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })
     createNodeField({
